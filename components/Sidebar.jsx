@@ -14,16 +14,19 @@ import {
 
 const menuItems = [
   { id: 1, label: "Home", icon: HomeIcon, link: "/" },
-  { id: 2, label: "Products", icon: ArticleIcon, link: "/posts" },
+  { id: 2, label: "Products", icon: ArticleIcon, link: "/products" },
   { id: 3, label: "Manage Users", icon: UsersIcon, link: "/users" },
-  { id: 4, label: "Manage Tutorials", icon: VideosIcon, link: "/tutorials" },
+  { id: 4, label: "Manage Account", icon: VideosIcon, link: "/accounts" },
 ];
 
 const Sidebar = () => {
+  const router = useRouter();
   const [toggleCollapse, setToggleCollapse] = useState(false);
   const [isCollapsible, setIsCollapsible] = useState(false);
 
-  const router = useRouter();
+  const handleLogout = () => {
+    router.push("/login");
+  };
 
   const activeMenu = useMemo(
     () => menuItems.find((menu) => menu.link === router.pathname),
@@ -78,7 +81,7 @@ const Sidebar = () => {
                 hidden: toggleCollapse,
               })}
             >
-              Logo
+              SAGAR
             </span>
           </div>
           {isCollapsible && (
@@ -118,7 +121,10 @@ const Sidebar = () => {
         </div>
       </div>
 
-      <div className={`${getNavItemClasses({})} px-3 py-4`}>
+      <div
+        className={`${getNavItemClasses({})} px-3 py-4 cursor-pointer`}
+        onClick={handleLogout}
+      >
         <div style={{ width: "2.5rem" }}>
           <LogoutIcon />
         </div>

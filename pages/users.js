@@ -30,11 +30,11 @@ const Users = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     const newUser = {
-      id: userData.length + 1, 
+      id: userData.length + 1,
       name: formData.name,
       email: formData.email,
     };
- 
+
     setUserData([...userData, newUser]);
     setFormData({ name: "", email: "" });
   };
