@@ -41,7 +41,7 @@ const Products = () => {
         ) : (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {movies.map((product) => (
-              <div
+              <div 
                 key={product.id}
                 className="bg-gray-800 rounded-lg overflow-hidden shadow-lg transform hover:scale-105 transition-transform duration-300 hover:shadow-xl"
               >
@@ -54,7 +54,7 @@ const Products = () => {
                   <h3 className="text-lg font-semibold mb-2">
                     {product.title}
                   </h3>
-                  <p className="text-sm">{product.description}</p>
+                  <p className="text-sm">$ {product.price}</p>
                   <button className="bg-red-600 text-white mt-2 py-1 px-2 rounded hover:bg-red-700">
                     Buy Now
                   </button>
