@@ -32,11 +32,11 @@ const Home = () => {
 
   return (
     <Layout>
-      <div className="bg-black h-screen text-white">
-        <div className="bg-red-600 p-4">
+      <div className="h-screen text-white">
+        <div className="bg-red-500 p-4">
           <div className="flex items-center justify-between">
             <ul className="flex space-x-4">
-              <li>SK PRODUCTS</li>
+              <li>SR PRODUCTS</li>
             </ul>
           </div>
         </div>
@@ -44,8 +44,7 @@ const Home = () => {
         <div
   className="h-96 bg-cover bg-center flex items-center justify-center"
   style={{
-    backgroundImage: "url('https://images.pexels.com/photos/15622755/pexels-photo-15622755.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1')", // Placeholder image URL
-  }}
+    backgroundImage: "url('https://images.pexels.com/photos/15622755/pexels-photo-15622755.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1')" }}
 >
   <div className="text-center">
     <h1 className="text-4xl font-semibold mb-2">Discover Amazing Products</h1>
@@ -80,7 +79,7 @@ const Home = () => {
         </div>
       </div>
       
-      <section className="bg-red-600 py-12 mt-5">
+      <section className="bg-red-500 py-12 mt-5">
           <div className="container mx-auto text-center">
             <h2 className="text-3xl font-semibold text-white mb-4">Join Our Newsletter</h2>
             <p className="text-lg text-white">Subscribe to our newsletter for exclusive offers and updates.</p>
