@@ -2,7 +2,7 @@ import React from "react";
 import Layout from "../components/Layout";
 
 const Home = () => {
-  // Dummy product data 
+  // Dummy product data
   const products = [
     {
       id: 1,
@@ -42,19 +42,24 @@ const Home = () => {
         </div>
 
         <div
-  className="h-96 bg-cover bg-center flex items-center justify-center"
-  style={{
-    backgroundImage: "url('https://images.pexels.com/photos/15622755/pexels-photo-15622755.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1')" }}
->
-  <div className="text-center">
-    <h1 className="text-4xl font-semibold mb-2">Discover Amazing Products</h1>
-    <p className="text-lg">Shop the latest trends in fashion and electronics</p>
-    <button className="bg-red-600 text-white py-2 px-4 mt-4 rounded hover:bg-red-700">
-      Get Started
-    </button>
-  </div>
-</div>
-
+          className="h-96 bg-cover bg-center flex items-center justify-center"
+          style={{
+            backgroundImage:
+              "url('https://images.unsplash.com/photo-1500382017468-9049fed747ef?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1932&q=80')",
+          }}
+        >
+          <div className="text-center">
+            <h1 className="text-4xl font-semibold mb-2">
+              Discover Amazing Products
+            </h1>
+            <p className="text-lg">
+              Shop the latest trends in fashion and electronics
+            </p>
+            <button className="bg-red-600 text-white py-2 px-4 mt-4 rounded hover:bg-red-700">
+              Get Started
+            </button>
+          </div>
+        </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 m-4">
           {products.map((product) => (
@@ -68,7 +73,9 @@ const Home = () => {
                 className="w-full h-40 object-cover"
               />
               <div className="p-4">
-                <h3 className="text-lg text-black font-semibold mb-1">{product.name}</h3>
+                <h3 className="text-lg text-black font-semibold mb-1">
+                  {product.name}
+                </h3>
                 <p className="text-sm text-black">{product.price}</p>
                 <button className="bg-red-600 text-white mt-2 py-1 px-2 rounded hover:bg-red-700">
                   Add to Cart
@@ -78,23 +85,27 @@ const Home = () => {
           ))}
         </div>
       </div>
-      
+
       <section className="bg-red-500 py-12 mt-5">
-          <div className="container mx-auto text-center">
-            <h2 className="text-3xl font-semibold text-white mb-4">Join Our Newsletter</h2>
-            <p className="text-lg text-white">Subscribe to our newsletter for exclusive offers and updates.</p>
-            <div className="mt-6">
-              <input
-                type="email"
-                placeholder="Enter your email"
-                className="w-full sm:w-2/3 lg:w-1/2 px-4 py-2 rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-300"
-              />
-              <button className="bg-white text-red-600 py-2 px-4 ml-2 rounded-full hover:bg-red-100">
-                Subscribe
-              </button>
-            </div>
+        <div className="container mx-auto text-center">
+          <h2 className="text-3xl font-semibold text-white mb-4">
+            Join Our Newsletter
+          </h2>
+          <p className="text-lg text-white">
+            Subscribe to our newsletter for exclusive offers and updates.
+          </p>
+          <div className="mt-6">
+            <input
+              type="email"
+              placeholder="Enter your email"
+              className="w-full sm:w-2/3 lg:w-1/2 px-4 py-2 rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-300"
+            />
+            <button className="bg-white text-red-600 py-2 px-4 ml-2 rounded-full hover:bg-red-100">
+              Subscribe
+            </button>
           </div>
-        </section>
+        </div>
+      </section>
     </Layout>
   );
 };
